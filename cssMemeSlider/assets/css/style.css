@@ -2,24 +2,41 @@ body{
     margin: 0;
     padding: 0;
     min-width: 1024px;
+    background-color: rgb(114, 100, 100);
 }
 .wrapper{
     margin: 0 auto;
-    width: 400%;
 }
-.slider{
+.slider {
     margin: 20px 20px;
     position: relative;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+    border: 10px solid;
+    border-radius: 5%;
+    width: 93%;
 }
-.slider__meme{
+.slider__meme {
+    position: relative;
+    display: flex;
     max-height: 90%;
+    min-width: 104%;
     height: 50%;
-
+    overflow: hidden;
+    margin-left: -40px;
 }
-img{
+
+img {
     max-height: 50%;
-    height: 82vh;
-    width: 150%
+    height: 78vh;
+    width: 100%;
+    margin-left: 40px;
+    padding-right: 0px;
+}
+.meme2{
+    min-width: 100%;
+}
+.container{
+    display: flex;
 }
