@@ -4,12 +4,15 @@ body{
     min-width: 1024px;
     background-color: #191920;
 }
+p{
+    margin-right: 40%;
+    white-space: pre;
+}
 .wrapper{
     margin: 0 auto;
 }
 .slider {
     margin: 20px 20px;
-    position: relative;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
@@ -18,7 +21,6 @@ body{
     width: 93%;
 }
 .slider__meme {
-    position: relative;
     display: flex;
     max-height: 90%;
     min-width: 104%;
@@ -28,9 +30,9 @@ body{
 
 img {
     max-height: 50%;
-    height: 78vh;
-    min-width: 97.5%;
-    margin-left: 40px;
+    height: 68vh;
+    min-width: 96.5%;
+    margin-left: 34px;
     padding-right: 0px;
 }
 .meme2{
@@ -39,22 +41,26 @@ img {
 .container{
     display: flex;
     justify-content: space-around;
+    max-width: 30%;
+    margin-top: -62px;
+    overflow: hidden;
 }
 input[name="radioo"]{
     visibility: hidden;
 }
 .scroll{
     display: flex;
-    margin-left: 850px;
+    justify-content: end;
+    margin-right: 35px;
 }
 .button{
-    margin-right: 10px;
+    margin-right: -20px;
     display: block;
     width: 2rem;
     height: 2rem;
-    background-color: rgb(38,43,143);
+    background-color: rgb(38, 43, 143);
     border-radius: 50%;
-    border: 0.4rem solid #191920;
+    border: 1.6rem solid #191920;
     transition: 0.4s;
     cursor: pointer;
 }
@@ -66,35 +72,62 @@ input[name="radioo"]{
     background-color: rgb(44,44,99);
     transition: 0.4s;
 }
+.container__text{
+    display: flex;
+    color: aliceblue;
+    font-size: 182%;
+    min-width: 22%;
+    justify-content: revert-layer;
+    margin-left: 34px;
+    /* overflow: hidden; */
+}
 /*     */
 #r1:checked ~ .slider .slider__meme{
     transform: translateX();
     transition: 0.6s;
   }
   #r2:checked ~ .slider .slider__meme{
-    transform: translateX(-100rem);
+    transform: translateX(-100%);
     transition: 0.6s;
 
   }
   #r3:checked ~ .slider .slider__meme{
-    transform: translateX(-205rem);
+    transform: translateX(-203%);
     transition: 0.6s;
 
   }
   #r4:checked ~ .slider .slider__meme{
-    transform: translateX(-307rem);
+    transform: translateX(-304%);
     transition: 0.6s;
 
   }
-  #r1:checked ~ .container .scroll label:nth-child(1) {
+  #r1:checked ~ .scroll label:nth-child(1) {
     background-color: wheat;
   }
-  #r2:checked ~ .container .scroll label:nth-child(2) {
+  #r2:checked ~ .scroll label:nth-child(2) {
     background-color: wheat;
   }
-  #r3:checked ~ .container .scroll label:nth-child(3) {
+  #r3:checked ~ .scroll label:nth-child(3) {
     background-color: wheat;
   }
-  #r4:checked ~ .container .scroll label:nth-child(4) {
+  #r4:checked ~ .scroll label:nth-child(4) {
     background-color: wheat;
+  }
+  /* скролл текста    */
+
+  #r1:checked ~ .container .container__text{
+    transform: translateX();
+    transition: 0.6s;
+  }
+  #r2:checked ~ .container .container__text{
+    transform: translateX(-90%);
+    transition: 0.6s;
+  }
+  #r3:checked ~ .container .container__text{
+    transform: translateX(-200%);
+    transition: 0.6s;
+  }
+  #r4:checked ~ .container .container__text{
+    transform: translateX(-320%);
+    transition: 0.6s;
   }
