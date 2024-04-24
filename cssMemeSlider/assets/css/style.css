@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     min-width: 1024px;
-    background-color: rgb(114, 100, 100);
+    background-color: #191920;
 }
 .wrapper{
     margin: 0 auto;
@@ -23,14 +23,13 @@ body{
     max-height: 90%;
     min-width: 104%;
     height: 50%;
-    overflow: hidden;
-    margin-left: -40px;
+    margin-left: -60px;
 }
 
 img {
     max-height: 50%;
     height: 78vh;
-    width: 100%;
+    min-width: 97.5%;
     margin-left: 40px;
     padding-right: 0px;
 }
@@ -39,4 +38,63 @@ img {
 }
 .container{
     display: flex;
+    justify-content: space-around;
 }
+input[name="radioo"]{
+    visibility: hidden;
+}
+.scroll{
+    display: flex;
+    margin-left: 850px;
+}
+.button{
+    margin-right: 10px;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(38,43,143);
+    border-radius: 50%;
+    border: 0.4rem solid #191920;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: rgb(11,87,250);
+    transition: 0.4s;
+}
+.button:active{
+    background-color: rgb(44,44,99);
+    transition: 0.4s;
+}
+/*     */
+#r1:checked ~ .slider .slider__meme{
+    transform: translateX();
+    transition: 0.6s;
+  }
+  #r2:checked ~ .slider .slider__meme{
+    transform: translateX(-100rem);
+    transition: 0.6s;
+
+  }
+  #r3:checked ~ .slider .slider__meme{
+    transform: translateX(-205rem);
+    transition: 0.6s;
+
+  }
+  #r4:checked ~ .slider .slider__meme{
+    transform: translateX(-307rem);
+    transition: 0.6s;
+
+  }
+  #r1:checked ~ .container .scroll label:nth-child(1) {
+    background-color: wheat;
+  }
+  #r2:checked ~ .container .scroll label:nth-child(2) {
+    background-color: wheat;
+  }
+  #r3:checked ~ .container .scroll label:nth-child(3) {
+    background-color: wheat;
+  }
+  #r4:checked ~ .container .scroll label:nth-child(4) {
+    background-color: wheat;
+  }
