@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    min-width: 1024px;
+    min-width: 100%;
     background-color: #191920;
 }
 p{
@@ -163,4 +163,81 @@ input[name="radioo"]{
   p:nth-child(3),
   p:nth-child(4){
     opacity: 0;
+  }
+
+ /* mobile 320x568  */
+
+   @media (max-width: 320px) {
+    .slider{
+      width: 88%;
+      margin: 10px 10px;
+    }
+    .slider__meme{
+      display: flex;
+    max-height: 90%;
+    width: 104%;
+    height: 50%;
+    margin-left: -34px;
+    }
+    img{
+      height: 38vh;
+    }
+    .container{
+      margin-top: -19px;
+      max-width: 100%;
+    }
+    .container__text{
+      font-size: 100%;
+      margin-left: 23px;
+    }
+    .button{
+      width: 1rem;
+      height: 1rem;
+      border: 1.4rem solid #191920;
+    }
+    .scroll{
+      justify-content: center;
+      margin-top: -9px;
+    }
+    /* mobile img*/
+    #r1:checked ~ .slider .slider__meme{
+      transform: translateX();
+      transition: 0.6s;
+    }
+    #r2:checked ~ .slider .slider__meme{
+      transform: translateX(-111%);
+      transition: 0.6s;
+
+    }
+    #r3:checked ~ .slider .slider__meme{
+      transform: translateX(-223%);
+      transition: 0.6s;
+
+    }
+    #r4:checked ~ .slider .slider__meme{
+      transform: translateX(-333%);
+      transition: 0.6s;
+
+    }
+    /* mobile text*/
+    #r1:checked ~ .container .container__text{
+      transform: translateX();
+      transition: 0.6s;
+    }
+    #r2:checked ~ .container .container__text{
+      transform: translateX(-76%);
+      transition: 0.6s;
+
+    }
+    #r3:checked ~ .container .container__text{
+      transform: translateX(-150%);
+      transition: 0.6s;
+
+    }
+    #r4:checked ~ .container .container__text{
+      transform: translateX(-225%);
+      transition: 0.6s;
+
+    }
+
   }
